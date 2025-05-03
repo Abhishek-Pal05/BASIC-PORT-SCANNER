@@ -34,3 +34,22 @@ Limitations
 
 Ethical Considerations
 This script is intended for educational purposes and for scanning systems that you have explicit permission to test. Scanning networks or systems without authorization is illegal and unethical. The author is not responsible for any misuse of this tool.
+
+Addition-
+# BASIC STEALTH SCAN (SYN Scan - Requires Root/Admin Privileges) 
+A stealth scan is a type of port scanning technique designed to be less detectable by the target system's security measures, such as firewalls and intrusion detection systems (IDS). Unlike a standard TCP connect scan, which completes the full three-way handshake to establish a connection, stealth scans often employ methods to avoid this, thus reducing the chances of being logged.
+
+Features-
+1. TCP Connect Scan:** The default scanning method, attempting a full TCP connection to each specified port.
+2. SYN Stealth Scan:** Sends SYN packets and analyzes responses (SYN-ACK for open, RST for closed) without completing the TCP handshake. This method is generally less detectable but requires elevated privileges.
+3. User-Friendly Input:** Prompts the user for the target IP address and a comma-separated list of ports to scan.
+4. Clear Output:** Displays the status (Open or Closed) for each scanned port, indicating the scan method used.
+5. Privilege Detection:** Checks if the script is run with root/administrator privileges for SYN scanning.
+6. Fallback Mechanism:** Automatically reverts to TCP connect scan if SYN scan is requested but privileges are insufficient.
+
+# SYN Scan (-sS): 
+This is often referred to as a "half-open" scan. The scanner sends a SYN packet and analyzes the response (SYN-ACK for open, RST for closed). It doesn't send the final ACK to complete the connection. Your basic SYN scan code implements this.   
+
+
+
+
